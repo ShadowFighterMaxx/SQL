@@ -21,3 +21,12 @@ select * from st where age = 58 and phone = 4;
 select * from st where age = 4 and phone = 55;
 
 
+select name 
+from st
+where age=
+(select min (age) from st)
+
+select name 
+from st
+where age=
+(select max (age) from st)
